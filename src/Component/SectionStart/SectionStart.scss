@@ -1,0 +1,26 @@
+@use "../../Style/import.scss" as import;
+
+.SectionStart {
+	height: 100vh;
+	background-image: url(../../Resurce/bgStart.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	max-height: 870px;
+	display: flex;
+	align-items: center;
+	&__content {
+		@include import.container();
+		&--title {
+			margin-bottom: 40px;
+			.SectionStart__title--style {
+				@include import.JSBold(60px, #ffffff);
+			}
+		}
+		&--description {
+			margin-bottom: 40px;
+			.SectionStart__description--style {
+				@include import.JSMedium(24px, #ffffff);
+			}
+		}
+	}
+}

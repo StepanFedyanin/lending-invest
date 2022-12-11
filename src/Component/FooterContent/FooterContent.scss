@@ -1,0 +1,40 @@
+@use "../../Style/import.scss" as import;
+.FooterContent {
+	height: 50vh;
+	padding: 60px 0;
+	background: #ececec;
+	&--container {
+		@include import.container();
+	}
+}
+.FooterContent__content {
+	display: flex;
+	justify-content: space-between;
+	&--logo {
+		.FooterContent__logo {
+			margin-bottom: 15px;
+			.FooterContent__logo--text {
+				@include import.JSBold(24px, #333333);
+			}
+		}
+		.FooterContent__logo--description {
+			margin-top: 15px;
+			.FooterContent__description--text {
+				@include import.JSMedium(15px, #999999);
+			}
+		}
+	}
+}
+.FooterContent__content--nav {
+	.FooterContent__nav--title {
+		.FooterContent__title--style {
+			@include import.JSBold(18px, #333333);
+		}
+	}
+	.FooterContent__nav--item {
+		margin-top: 16px;
+		.FooterContent__item--style {
+			@include import.JSMedium(16px, #999999);
+		}
+	}
+}

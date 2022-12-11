@@ -1,0 +1,11 @@
+@use "../../../Style/import.scss" as import;
+.ButtonUI--blue {
+	padding: 15px 40px;
+	background: #5e4dcd;
+	@include import.JSBold(16px, #ffff);
+}
+.ButtonUI--purple {
+	padding: 15px 40px;
+	background: #ffd2dd;
+	@include import.JSBold(16px, #5e4dcd);
+}

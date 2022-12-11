@@ -1,0 +1,85 @@
+@use "../../Style/import.scss" as import;
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	// height: 100px;
+	padding: 1% 0;
+	z-index: 10;
+	filter: drop-shadow(0px 4px 40px rgba(51, 51, 51, 0.08));
+	background: rgba(88, 37, 114, 0.28);
+	&--container {
+		@include import.container();
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+.header__logo {
+	&--text {
+		@include import.JSBold(24px, #ffffff);
+	}
+}
+.header__content {
+	display: flex;
+	align-items: center;
+	width: 75%;
+	justify-content: space-between;
+	&--nav {
+		display: flex;
+		align-items: center;
+		width: 70%;
+		justify-content: space-between;
+		.header__content--page {
+			.header__page--link {
+				@include import.JSMedium(14px, #ffffff);
+			}
+		}
+	}
+	&--input {
+		display: flex;
+		align-items: center;
+		margin-left: 10px;
+		.header__input {
+			margin: 0 8px;
+		}
+	}
+}
+.DropDuwn {
+	position: relative;
+	// margin: 0 1%;
+	&__title {
+		&--style {
+			@include import.JSMedium(14px, #ffffff);
+			padding: 5px 0;
+		}
+		z-index: 10;
+	}
+	&__title:hover + &__content {
+		position: absolute;
+		transform: translateY(0px);
+		transition: all 0.3s;
+	}
+
+	&__content {
+		z-index: 5;
+		width: 100%;
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		display: none;
+		top: 20px;
+		&--item {
+			margin: 5px 0;
+			cursor: pointer;
+			.DropDuwn__item--page {
+				@include import.JSMedium(14px, #ffffff);
+			}
+		}
+	}
+	&__content--hide {
+		transform: translateY(-1000%);
+	}
+}

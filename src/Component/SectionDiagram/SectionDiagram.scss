@@ -1,0 +1,42 @@
+@use "../../Style/import.scss" as import;
+.SectionDiagram {
+	background-color: #ffd2dd;
+	background-image: url(../../Resurce/SectionDiagram.png);
+	background-repeat: no-repeat;
+	background-position: 0 100%;
+	height: 90vh;
+	max-height: 700px;
+	display: flex;
+	align-items: center;
+	&--container {
+		@include import.container();
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+.SectionDiagram__content {
+	display: flex;
+	&--descriprion {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		background-image: url(../../Resurce/SectionDiagram2.png);
+		background-repeat: no-repeat;
+		.SectionDiagram__descriprion--title {
+			width: 70%;
+			.SectionDiagram__title--style {
+				@include import.JSBold(32px, #333333);
+			}
+		}
+		.SectionDiagram__descriprion--text {
+			.SectionDiagram__text--style {
+				@include import.JSMedium(20px, #ffffff);
+			}
+		}
+	}
+	&--diagram {
+		width: 60%;
+	}
+}

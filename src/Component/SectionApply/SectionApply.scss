@@ -1,0 +1,27 @@
+@use "../../Style/import.scss" as import;
+.SectionApply {
+	height: 90vh;
+	display: flex;
+	align-items: center;
+	&--container {
+		@include import.container();
+		display: flex;
+		align-items: center;
+	}
+}
+.SectionApply__content {
+	width: 50%;
+	.SectionApply__title {
+		width: 90%;
+		margin-bottom: 24px;
+		&--style {
+			@include import.JSBold(32px, #333333);
+		}
+	}
+	.SectionApply__description {
+		margin-bottom: 40px;
+		&--style {
+			@include import.JSMedium(20px, #999999);
+		}
+	}
+}
