@@ -1,6 +1,7 @@
 @use "../../Style/import.scss" as import;
 .FooterContent {
-	height: 50vh;
+	height: 70vh;
+	max-height: fit-content;
 	padding: 60px 0;
 	background: #ececec;
 	&--container {
@@ -25,6 +26,11 @@
 		}
 	}
 }
+.FooterContent__content--navs {
+	display: flex;
+	justify-content: space-between;
+	width: 35%;
+}
 .FooterContent__content--nav {
 	.FooterContent__nav--title {
 		.FooterContent__title--style {
@@ -35,6 +41,46 @@
 		margin-top: 16px;
 		.FooterContent__item--style {
 			@include import.JSMedium(16px, #999999);
+		}
+	}
+}
+.FooterContent__connection {
+	margin-top: 10%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&--list {
+		display: flex;
+		width: 20%;
+		.FooterContent__connection--item {
+			margin: 0 4%;
+		}
+	}
+}
+@media (max-width: 768px) {
+	.FooterContent {
+		height: fit-content;
+		padding: 10% 0;
+	}
+	.FooterContent__content {
+		flex-direction: column;
+	}
+	.FooterContent__content--back {
+		position: absolute;
+		right: 10px;
+	}
+	.FooterContent__content--navs {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 20px;
+		width: 100%;
+	}
+	.FooterContent__connection {
+		flex-direction: column;
+		&--list {
+			margin-top: 20px;
+			justify-content: space-around;
+			width: 100%;
 		}
 	}
 }

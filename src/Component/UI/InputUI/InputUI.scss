@@ -1,0 +1,32 @@
+@use "../../../Style/import.scss" as import;
+.InputUI {
+	&__title {
+		margin-bottom: 16px;
+		&--style {
+			@include import.JSMedium(20px, #333333);
+		}
+	}
+	&__send {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		justify-content: space-between;
+		border-bottom: 1px solid #0000002a;
+		&--email {
+			width: 100%;
+			.InputUI__email--style {
+				@include import.JSMedium(12px, #333333);
+				opacity: 0.5;
+				width: 100%;
+			}
+		}
+		&--submit {
+			.InputUI__submi--style {
+				padding: 10px 20px;
+				@include import.JSBold(25px, #ffffff);
+				background: #5e4dcd;
+				border-radius: 8px 8px 0px 0px;
+			}
+		}
+	}
+}

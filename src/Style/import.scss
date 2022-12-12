@@ -3,6 +3,10 @@
 @mixin container() {
 	width: calc(100vw - 30%);
 	margin: 0 auto;
+	@media (max-width: 576px) {
+		width: calc(100vw - 20px);
+		margin: 0 auto;
+	}
 }
 @mixin JSBold($fz, $color) {
 	font-family: "Josefin Sans";

@@ -2,10 +2,10 @@
 .ButtonUI--blue {
 	padding: 15px 40px;
 	background: #5e4dcd;
-	@include import.JSBold(16px, #ffff);
+	@include import.JSBold(calc(8px + (8 + 8 * 0.7) * ((100vw - 375px) / 1990)), #ffff);
 }
 .ButtonUI--purple {
 	padding: 15px 40px;
 	background: #ffd2dd;
-	@include import.JSBold(16px, #5e4dcd);
+	@include import.JSBold(calc(8px + (8 + 8 * 0.7) * ((100vw - 375px) / 1990)), #5e4dcd);
 }

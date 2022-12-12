@@ -13,13 +13,13 @@
 		&--title {
 			margin-bottom: 40px;
 			.SectionStart__title--style {
-				@include import.JSBold(60px, #ffffff);
+				@include import.JSBold(calc(25px + (25 + 25 * 0.7) * ((100vw - 375px) / 1990)), #ffffff);
 			}
 		}
 		&--description {
 			margin-bottom: 40px;
 			.SectionStart__description--style {
-				@include import.JSMedium(24px, #ffffff);
+				@include import.JSMedium(calc(15px + (9 + 9 * 0.7) * ((100vw - 375px) / 1990)), #ffffff);
 			}
 		}
 	}

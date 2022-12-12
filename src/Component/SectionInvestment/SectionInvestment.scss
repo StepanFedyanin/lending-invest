@@ -16,12 +16,13 @@
 }
 .SectionInvestment__title {
 	&--style {
-		@include import.JSBold(32px, #333333);
+		text-align: center;
+		@include import.JSBold(calc(25px + (25 + 25 * 0.7) * ((100vw - 375px) / 1990)), #333333);
 	}
 }
 .SectionInvestment__decription {
 	&--style {
-		@include import.JSMedium(20px, #999999);
+		@include import.JSMedium(calc(15px + (5 + 5 * 0.7) * ((100vw - 375px) / 1990)), #999999);
 		text-align: center;
 	}
 }
@@ -29,7 +30,7 @@
 	background: #ffffff;
 	box-shadow: 0px 24px 60px rgba(51, 51, 51, 0.16);
 	width: fit-content;
-	max-width: 30%;
+	max-width: 28%;
 	max-height: 480px;
 	height: 100%;
 	margin: 20px 15px;
@@ -51,7 +52,7 @@
 				position: absolute;
 				padding: 7px 12px;
 				.InvestmentCard__img--text {
-					@include import.JSMedium(10px, #333333);
+					@include import.JSMedium(calc(7px + (1 + 1 * 0.7) * ((100vw - 375px) / 1990)), #333333);
 				}
 			}
 			.InvestmentCard__description--one {
@@ -70,7 +71,6 @@
 		width: 0;
 		transition: all 0.5s;
 		&--transform {
-			width: 100vw;
 			transform: translateX(0%);
 			transition: all 0.5s;
 		}
@@ -91,12 +91,12 @@
 		margin: 4px 0;
 		.characteristics__item--title {
 			.characteristics__title--style {
-				@include import.JSMedium(12px, #333333);
+				@include import.JSMedium(calc(9px + (3 + 3 * 0.7) * ((100vw - 375px) / 1990)), #333333);
 			}
 		}
 		.characteristics__item--value {
 			.characteristics__value--style {
-				@include import.JSBold(12px, #333333);
+				@include import.JSBold(calc(9px + (3 + 3 * 0.7) * ((100vw - 375px) / 1990)), #333333);
 			}
 		}
 	}
@@ -112,7 +112,7 @@
 	.characteristics__btn--style {
 		padding: 25px 40px;
 		background: #ffd2dd;
-		@include import.JSBold(16px, #5e4dcd);
+		@include import.JSBold(calc(10px + (6 + 6 * 0.7) * ((100vw - 375px) / 1990)), #5e4dcd);
 	}
 }
 .cover__content {
@@ -121,17 +121,17 @@
 		margin-bottom: 24px;
 		.cover__title--item {
 			.cover__title--style {
-				@include import.JSMedium(20px, #333333);
+				@include import.JSMedium(calc(15px + (5 + 5 * 0.7) * ((100vw - 375px) / 1990)), #333333);
 			}
 			.cover__title--subtitle {
-				@include import.JSMedium(12px, #999999);
+				@include import.JSMedium(calc(9px + (3 + 3 * 0.7) * ((100vw - 375px) / 1990)), #999999);
 			}
 		}
 	}
 	&--description {
 		margin-bottom: 24px;
 		.cover__description--text {
-			@include import.JSMedium(13px, #333333);
+			@include import.JSMedium(calc(10px + (3 + 3 * 0.7) * ((100vw - 375px) / 1990)), #333333);
 		}
 	}
 	&--progress {
@@ -148,11 +148,47 @@
 		.cover__progress--description {
 			margin-top: 8px;
 			.cover__progress--text {
-				@include import.JSMedium(14px, #333333);
+				@include import.JSMedium(calc(11px + (3 + 3 * 0.7) * ((100vw - 375px) / 1990)), #333333);
 				span {
-					@include import.JSBold(16px, #5e4dcd);
+					@include import.JSBold(calc(14px + (2 + 2 * 0.7) * ((100vw - 375px) / 1990)), #5e4dcd);
 				}
 			}
 		}
+	}
+}
+@media (max-width: 992px) {
+	.InvestmentCard {
+		max-width: 42%;
+		max-height: 370px;
+	}
+	.cover__content {
+		padding: 5px;
+	}
+	.characteristics_content {
+		padding: 10px 5px 0 5px;
+	}
+	.characteristics__btn {
+		.characteristics__btn--style {
+			padding: 15px 40px;
+			background: #ffd2dd;
+			@include import.JSBold(calc(10px + (6 + 6 * 0.7) * ((100vw - 375px) / 1990)), #5e4dcd);
+		}
+	}
+}
+@media (max-width: 768px) {
+	.SectionInvestment {
+		.SectionInvestment--container {
+			.SectionInvestment__contenet {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				flex-wrap: nowrap;
+				margin: 0 0 10% 0;
+			}
+		}
+	}
+	.InvestmentCard {
+		max-width: 70%;
+		max-height: 430px;
 	}
 }

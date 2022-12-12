@@ -17,8 +17,9 @@
 }
 .SectionDiagram__content {
 	display: flex;
+	justify-content: space-between;
 	&--descriprion {
-		width: 50%;
+		width: 40%;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -27,16 +28,30 @@
 		.SectionDiagram__descriprion--title {
 			width: 70%;
 			.SectionDiagram__title--style {
-				@include import.JSBold(32px, #333333);
+				@include import.JSBold(calc(18px + (12 + 12 * 0.7) * ((100vw - 375px) / 1990)), #333333);
 			}
 		}
 		.SectionDiagram__descriprion--text {
 			.SectionDiagram__text--style {
-				@include import.JSMedium(20px, #ffffff);
+				@include import.JSMedium(calc(9px + (11 + 11 * 0.7) * ((100vw - 375px) / 1990)), #ffffff);
 			}
 		}
 	}
 	&--diagram {
-		width: 60%;
+		width: 45%;
+	}
+}
+@media (max-width: 992px) {
+	.SectionDiagram__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		&--descriprion {
+			width: 100%;
+			background-image: none;
+		}
+		&--diagram {
+			width: 100%;
+		}
 	}
 }
