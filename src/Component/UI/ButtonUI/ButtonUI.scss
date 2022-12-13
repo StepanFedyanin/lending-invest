@@ -1,11 +1,18 @@
 @use "../../../Style/import.scss" as import;
 .ButtonUI--blue {
-	padding: 15px 40px;
+	padding: 10px 10px;
 	background: #5e4dcd;
+	// width: 100%;
+	width: 7vw;
+	min-width: fit-content;
 	@include import.JSBold(calc(8px + (8 + 8 * 0.7) * ((100vw - 375px) / 1990)), #ffff);
+	white-space: nowrap;
 }
 .ButtonUI--purple {
-	padding: 15px 40px;
+	padding: 10px 10px;
 	background: #ffd2dd;
+	width: 7vw;
+	min-width: fit-content;
 	@include import.JSBold(calc(8px + (8 + 8 * 0.7) * ((100vw - 375px) / 1990)), #5e4dcd);
+	white-space: nowrap;
 }

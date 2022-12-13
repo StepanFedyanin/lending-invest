@@ -9,10 +9,10 @@ import FooterContent from './Component/FooterContent/FooterContent';
 function App() {
 	return (
 		<div className="App">
-			{/* <HeaderContent /> */}
+			<HeaderContent />
 			<SectionStart />
 			<SectionInvestment />
-			{/* <SectionDiagram /> */}
+			<SectionDiagram />
 			<SectionApply />
 			<FooterContent />
 		</div>

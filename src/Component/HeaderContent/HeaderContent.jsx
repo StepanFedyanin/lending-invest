@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import ButtonUI from '../UI/ButtonUI/ButtonUI'
 import './HeaderContent.scss'
 const DropDuwn = ({ title, content }) => {
-
 	return (
 		<div className="DropDuwn" >
 			<div className="DropDuwn__title">
@@ -25,13 +24,14 @@ const DropDuwn = ({ title, content }) => {
 	)
 }
 function HeaderContent() {
+	const [burgerAdaptive, setBurgerAdaptive] = useState(false);
 	return (
-		<div className='header'>
+		<div className='header' style={burgerAdaptive ? { height: '100vh' } : null}>
 			<div className="header--container">
 				<div className="header__logo">
 					<h1 className='header__logo--text'>NEXT INVEST</h1>
 				</div>
-				<div className="header__content">
+				<div className={burgerAdaptive ? "header__content--active" : "header__content"} onClick={() => setBurgerAdaptive(false)}>
 					<div className="header__content--nav">
 						<DropDuwn title="Investment Opportunities" content={['page1', 'page2']} />
 						<DropDuwn title="How it works" content={['page1', 'page2']} />
@@ -48,7 +48,11 @@ function HeaderContent() {
 						</div>
 					</div>
 				</div>
+				<div className="header__burger" onClick={() => burgerAdaptive ? setBurgerAdaptive(false) : setBurgerAdaptive(true)}>
+					<span></span>
+				</div>
 			</div>
+
 		</div>
 	)
 }
