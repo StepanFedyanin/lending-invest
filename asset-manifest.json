@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/lending-invest/static/css/main.3f4608c6.css",
-    "main.js": "/lending-invest/static/js/main.cf1328e5.js",
+    "main.css": "/lending-invest/static/css/main.548a082f.css",
+    "main.js": "/lending-invest/static/js/main.70647968.js",
     "static/media/bgStart.png": "/lending-invest/static/media/bgStart.820abaeb121bd752d26f.png",
     "static/media/InvestorCard.png": "/lending-invest/static/media/InvestorCard.69d37d43c9db66986093.png",
     "static/media/SectionApply.png": "/lending-invest/static/media/SectionApply.382ea07f544ccd14e419.png",
     "index.html": "/lending-invest/index.html",
-    "main.3f4608c6.css.map": "/lending-invest/static/css/main.3f4608c6.css.map",
-    "main.cf1328e5.js.map": "/lending-invest/static/js/main.cf1328e5.js.map"
+    "main.548a082f.css.map": "/lending-invest/static/css/main.548a082f.css.map",
+    "main.70647968.js.map": "/lending-invest/static/js/main.70647968.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f4608c6.css",
-    "static/js/main.cf1328e5.js"
+    "static/css/main.548a082f.css",
+    "static/js/main.70647968.js"
   ]
 }
